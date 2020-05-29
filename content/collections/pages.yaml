@@ -1,0 +1,11 @@
+title: Pages
+template: statamic/pages/single
+layout: statamic/layout
+blueprints:
+  - pages
+revisions: false
+route: '/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

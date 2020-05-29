@@ -1,0 +1,53 @@
+title: Pages
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: content
+        field:
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          type: bard
+          localizable: false
+          listable: hidden
+          display: Content
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: template
+        field:
+          hide_partials: true
+          type: template
+          localizable: false
+          listable: hidden
+          display: Template
+      -
+        handle: image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          type: assets
+          localizable: false
+          listable: hidden
+          display: 'Featured Image'

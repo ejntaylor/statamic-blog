@@ -1,0 +1,5 @@
+title: Images
+disk: local
+blueprint: articles
+allow_uploads: true
+create_folders: true

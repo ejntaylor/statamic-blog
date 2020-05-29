@@ -1,0 +1,39 @@
+title: User
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          type: text
+          display: Name
+      -
+        handle: email
+        field:
+          type: text
+          input_type: email
+          display: 'Email Address'
+      -
+        handle: roles
+        field:
+          type: user_roles
+          width: 50
+          mode: select
+      -
+        handle: groups
+        field:
+          type: user_groups
+          width: 50
+          mode: select
+      -
+        handle: assets
+        field:
+          mode: grid
+          container: images
+          restrict: false
+          allow_uploads: true
+          type: assets
+          localizable: false
+          listable: true
+          display: Assets

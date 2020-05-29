@@ -1,0 +1,36 @@
+<div class="relative max-w-5xl mx-auto mt-16">
+    <article class="max-w-2xl py-32 mx-auto">
+        <header class="mb-16 content">
+            <h1>{{ title }}</h1>
+            {{ content | widont }}
+        </header>
+
+        {{ collection:articles as="articles" }} {{ if no_results }}
+        <h2 class="text-3xl italic tracking-tight">
+            Feel the rhythm! Feel the rhyme! Get on up, it's writing time! Cool
+            writings!
+        </h2>
+        {{ /if }} {{ articles }}
+        <div class="mb-2">
+            <a
+                href="{{ url }}"
+                class="text-lg font-bold leading-tight tracking-tight hover:text-teal"
+            >
+                {{ title | widont }}
+            </a>
+        </div>
+        {{ /articles }} {{ if total_results > 10 }} {{ paginate }}
+        <div class="flex justify-between pt-16 -mx-16 text-xl font-bold">
+            <a
+                href="{{ prev_page }}"
+                class="{{ ! prev_page ??= 'opacity-25' }}"
+            >
+                &larr; Back to the future
+            </a>
+            <a href="{{ next_page }}">
+                Forward to the past &rarr;
+            </a>
+        </div>
+        {{ /paginate }} {{ /if }} {{ /collection:articles }}
+    </article>
+</div>
